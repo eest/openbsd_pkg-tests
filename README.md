@@ -1,4 +1,3 @@
-openbsd_pkg-tests
-=================
+This playbook runs some tests on the ansible openbsd_pkg module.
 
-openbsd_pkg-tests
+Read the playbook for more information.
