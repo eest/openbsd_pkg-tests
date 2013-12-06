@@ -5,10 +5,10 @@
   # * It does not actually verify the presence of packages on the managed host.
   # * The specific version of a package ties those tests to a specific version
   #   of OpenBSD (in this case 5.4).
-  # * Testing "state=latest" is done by installing one version of OpenBSD with
-  #   some packages, performing an upgrade via bsd.rd to the next version, and
-  #   then upgrading packages from there (a virtual machine with snapshots
-  #   helps a lot).
+  # * Proper testing of "state=latest" is done by installing one version of
+  #   OpenBSD with some packages, performing an upgrade via bsd.rd to the next
+  #   version, and then upgrading packages from there (a virtual machine with
+  #   snapshots helps a lot).
   #
   # Basic hosts-file needed:
   # [openbsd_pkg-tests]
