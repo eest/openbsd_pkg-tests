@@ -40,6 +40,21 @@
     - name: Make sure bare stem package is absent again - should not be changed
       action: openbsd_pkg name=nmap state=absent
 
+    - name: Reset status of version- and flavor-less package - may be changed
+      action: openbsd_pkg name=nmap-- state=absent
+
+    - name: Make sure version- and flavor-less package is present - should be changed
+      action: openbsd_pkg name=nmap-- state=present
+
+    - name: Make sure verison- and flavor-less package is present again - should not be changed
+      action: openbsd_pkg name=nmap-- state=present
+
+    - name: Make sure version- and flavor-less  package is absent - should be changed
+      action: openbsd_pkg name=nmap-- state=absent
+
+    - name: Make sure version- and flavor-less package is absent again - should not be changed
+      action: openbsd_pkg name=nmap-- state=absent
+
     - name: Reset status of package with specific version - may be changed
       action: openbsd_pkg name=nmap-6.25p0 state=absent
 
