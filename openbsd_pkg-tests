@@ -214,3 +214,8 @@
       action: openbsd_pkg name=mutt-1.5.21p4v0-sasl-sidebar-compressed state=absent
       register: result
       failed_when: result.changed == False
+
+  - hosts: openbsd_pkg-tests
+    tasks:
+    - name: Attempt to upgrade all packages - may be changed
+      action: openbsd_pkg upgrade=yes
