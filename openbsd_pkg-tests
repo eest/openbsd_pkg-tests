@@ -215,7 +215,5 @@
       register: result
       failed_when: result.changed == False
 
-  - hosts: openbsd_pkg-tests
-    tasks:
     - name: Attempt to upgrade all packages - may be changed
-      action: openbsd_pkg upgrade=yes
+      action: openbsd_pkg name=* state=latest
