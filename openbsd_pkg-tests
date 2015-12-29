@@ -10,9 +10,7 @@
   #   version, and then upgrading packages from there (a virtual machine with
   #   snapshots helps a lot).
   #
-  # Basic hosts-file needed:
-  # [openbsd_pkg-tests]
-  # 192.168.1.106 ansible_python_interpreter=/usr/local/bin/python
+  # See the file "hosts" in this repo for the basic hosts-file needed.
   #
   # Commandline:
   # ansible-playbook -i hosts -v -u root -c ssh openbsd_pkg-tests
