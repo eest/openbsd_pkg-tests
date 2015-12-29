@@ -76,7 +76,7 @@
       register: result
       failed_when: result.changed == True
 
-    - name: Make sure version- and flavor-less  package is absent - should be changed
+    - name: Make sure version- and flavor-less package is absent - should be changed
       action: openbsd_pkg name=nmap-- state=absent
       register: result
       failed_when: result.changed == False
@@ -86,7 +86,7 @@
       register: result
       failed_when: result.changed == True
 
-    - name: Make sure version- and flavor-less  package is latest - should be changed
+    - name: Make sure version- and flavor-less package is latest - should be changed
       action: openbsd_pkg name=nmap-- state=latest
       register: result
       failed_when: result.changed == False
