@@ -4,7 +4,7 @@
   # * It does not verify the results of "--check" mode.
   # * It does not actually verify the presence of packages on the managed host.
   # * The specific version of a package ties those tests to a specific version
-  #   of OpenBSD (in this case 5.9).
+  #   of OpenBSD (in this case 6.0).
   # * Proper testing of "state=latest" is done by installing one version of
   #   OpenBSD with some packages, performing an upgrade via bsd.rd to the next
   #   version, and then upgrading packages from there (a virtual machine with
@@ -100,40 +100,40 @@
       failed_when: result.changed == False
 
     - name: Reset status of package with specific version - may be changed
-      action: openbsd_pkg name=nmap-7.01 state=absent
+      action: openbsd_pkg name=nmap-7.12 state=absent
 
     - name: Make sure package with specific verison is present - should be changed
-      action: openbsd_pkg name=nmap-7.01 state=present
+      action: openbsd_pkg name=nmap-7.12 state=present
       register: result
       failed_when: result.changed == False
 
     - name: Make sure package with specific version is present again - should not be changed
-      action: openbsd_pkg name=nmap-7.01 state=present
+      action: openbsd_pkg name=nmap-7.12 state=present
       register: result
       failed_when: result.changed == True
 
     - name: Make sure package with specific verison is absent - should be changed
-      action: openbsd_pkg name=nmap-7.01 state=absent
+      action: openbsd_pkg name=nmap-7.12 state=absent
       register: result
       failed_when: result.changed == False
 
     - name: Make sure package with specific version is absent again - should not be changed
-      action: openbsd_pkg name=nmap-7.01 state=absent
+      action: openbsd_pkg name=nmap-7.12 state=absent
       register: result
       failed_when: result.changed == True
 
     - name: Make sure package with specific version is latest - should be changed
-      action: openbsd_pkg name=nmap-7.01 state=latest
+      action: openbsd_pkg name=nmap-7.12 state=latest
       register: result
       failed_when: result.changed == False
 
     - name: Make sure package with specific version is latest again - should not be changed
-      action: openbsd_pkg name=nmap-7.01 state=latest
+      action: openbsd_pkg name=nmap-7.12 state=latest
       register: result
       failed_when: result.changed == True
 
     - name: Reset status of package with specific version again - should be changed
-      action: openbsd_pkg name=nmap-7.01 state=absent
+      action: openbsd_pkg name=nmap-7.12 state=absent
       register: result
       failed_when: result.changed == False
 
@@ -176,40 +176,80 @@
       failed_when: result.changed == False
 
     - name: Reset status of package with version and (multiple) flavors - may be changed
-      action: openbsd_pkg name=mutt-1.5.24p3v0-compressed-sasl-sidebar state=absent
+      action: openbsd_pkg name=mutt-1.6.1v0-compressed-sasl-sidebar state=absent
 
     - name: Make sure package with version and (multiple) flavors is present - should be changed
-      action: openbsd_pkg name=mutt-1.5.24p3v0-compressed-sasl-sidebar state=present
+      action: openbsd_pkg name=mutt-1.6.1v0-compressed-sasl-sidebar state=present
       register: result
       failed_when: result.changed == False
 
     - name: Make sure package with version and (multiple) flavors is present again - should not be changed
-      action: openbsd_pkg name=mutt-1.5.24p3v0-compressed-sasl-sidebar state=present
+      action: openbsd_pkg name=mutt-1.6.1v0-compressed-sasl-sidebar state=present
       register: result
       failed_when: result.changed == True
 
     - name: Make sure package with version and (multiple) flavors is absent - should be changed
-      action: openbsd_pkg name=mutt-1.5.24p3v0-compressed-sasl-sidebar state=absent
+      action: openbsd_pkg name=mutt-1.6.1v0-compressed-sasl-sidebar state=absent
       register: result
       failed_when: result.changed == False
 
     - name: Make sure package with version and (multiple) flavors is absent again - should not be changed
-      action: openbsd_pkg name=mutt-1.5.24p3v0-compressed-sasl-sidebar state=absent
+      action: openbsd_pkg name=mutt-1.6.1v0-compressed-sasl-sidebar state=absent
       register: result
       failed_when: result.changed == True
 
     - name: Make sure package with version and (multiple) flavors is latest - should be changed
-      action: openbsd_pkg name=mutt-1.5.24p3v0-compressed-sasl-sidebar state=latest
+      action: openbsd_pkg name=mutt-1.6.1v0-compressed-sasl-sidebar state=latest
       register: result
       failed_when: result.changed == False
 
     - name: Make sure package with version and (multiple) flavors is latest again - should not be changed
-      action: openbsd_pkg name=mutt-1.5.24p3v0-compressed-sasl-sidebar state=latest
+      action: openbsd_pkg name=mutt-1.6.1v0-compressed-sasl-sidebar state=latest
       register: result
       failed_when: result.changed == True
 
     - name: Reset status of package with version and (multiple) flavors again - should be changed
-      action: openbsd_pkg name=mutt-1.5.24p3v0-compressed-sasl-sidebar state=absent
+      action: openbsd_pkg name=mutt-1.6.1v0-compressed-sasl-sidebar state=absent
+      register: result
+      failed_when: result.changed == False
+
+
+
+    - name: Reset status of package with branch - may be changed
+      action: openbsd_pkg name=python%3.5 state=absent
+
+    - name: Make sure package with version and (multiple) flavors is present - should be changed
+      action: openbsd_pkg name=python%3.5 state=present
+      register: result
+      failed_when: result.changed == False
+
+    - name: Make sure package with version and (multiple) flavors is present again - should not be changed
+      action: openbsd_pkg name=python%3.5 state=present
+      register: result
+      failed_when: result.changed == True
+
+    - name: Make sure package with version and (multiple) flavors is absent - should be changed
+      action: openbsd_pkg name=python%3.5 state=absent
+      register: result
+      failed_when: result.changed == False
+
+    - name: Make sure package with version and (multiple) flavors is absent again - should not be changed
+      action: openbsd_pkg name=python%3.5 state=absent
+      register: result
+      failed_when: result.changed == True
+
+    - name: Make sure package with version and (multiple) flavors is latest - should be changed
+      action: openbsd_pkg name=python%3.5 state=latest
+      register: result
+      failed_when: result.changed == False
+
+    - name: Make sure package with version and (multiple) flavors is latest again - should not be changed
+      action: openbsd_pkg name=python%3.5 state=latest
+      register: result
+      failed_when: result.changed == True
+
+    - name: Reset status of package with version and (multiple) flavors again - should be changed
+      action: openbsd_pkg name=python%3.5 state=absent
       register: result
       failed_when: result.changed == False
 
