@@ -338,160 +338,160 @@
 
 
     - name: Reset status of package with specific version - may be changed
-      action: openbsd_pkg name=nmap-7.30 state=absent
+      action: openbsd_pkg name=nmap-7.40 state=absent
 
     - name: Make sure package with specific verison is present - should be changed
-      action: openbsd_pkg name=nmap-7.30 state=present
+      action: openbsd_pkg name=nmap-7.40 state=present
       register: result
       failed_when: result.changed == False
 
     - name: Make sure package with specific version is present again - should not be changed
-      action: openbsd_pkg name=nmap-7.30 state=present
+      action: openbsd_pkg name=nmap-7.40 state=present
       register: result
       failed_when: result.changed == True
 
     - name: Make sure package with specific verison is absent - should be changed
-      action: openbsd_pkg name=nmap-7.30 state=absent
+      action: openbsd_pkg name=nmap-7.40 state=absent
       register: result
       failed_when: result.changed == False
 
     - name: Make sure package with specific version is absent again - should not be changed
-      action: openbsd_pkg name=nmap-7.30 state=absent
+      action: openbsd_pkg name=nmap-7.40 state=absent
       register: result
       failed_when: result.changed == True
 
     - name: Make sure package with specific version is latest - should be changed
-      action: openbsd_pkg name=nmap-7.30 state=latest
+      action: openbsd_pkg name=nmap-7.40 state=latest
       register: result
       failed_when: result.changed == False
 
     - name: Make sure package with specific version is latest again - should not be changed
-      action: openbsd_pkg name=nmap-7.30 state=latest
+      action: openbsd_pkg name=nmap-7.40 state=latest
       register: result
       failed_when: result.changed == True
 
     - name: Reset status of package with specific version again - should be changed
-      action: openbsd_pkg name=nmap-7.30 state=absent
+      action: openbsd_pkg name=nmap-7.40 state=absent
       register: result
       failed_when: result.changed == False
 
 
 
     - name: Reset status of package with specific version (clean) - may be changed
-      action: openbsd_pkg name=nmap-7.30 state=absent clean=yes
+      action: openbsd_pkg name=nmap-7.40 state=absent clean=yes
 
     - name: Make sure package with specific verison is present (clean) - should be changed
-      action: openbsd_pkg name=nmap-7.30 state=present clean=yes
+      action: openbsd_pkg name=nmap-7.40 state=present clean=yes
       register: result
       failed_when: result.changed == False
 
     - name: Make sure package with specific version is present again (clean) - should not be changed
-      action: openbsd_pkg name=nmap-7.30 state=present clean=yes
+      action: openbsd_pkg name=nmap-7.40 state=present clean=yes
       register: result
       failed_when: result.changed == True
 
     - name: Make sure package with specific verison is absent (clean) - should be changed
-      action: openbsd_pkg name=nmap-7.30 state=absent clean=yes
+      action: openbsd_pkg name=nmap-7.40 state=absent clean=yes
       register: result
       failed_when: result.changed == False
 
     - name: Make sure package with specific version is absent again (clean) - should not be changed
-      action: openbsd_pkg name=nmap-7.30 state=absent clean=yes
+      action: openbsd_pkg name=nmap-7.40 state=absent clean=yes
       register: result
       failed_when: result.changed == True
 
     - name: Make sure package with specific version is latest (clean) - should be changed
-      action: openbsd_pkg name=nmap-7.30 state=latest clean=yes
+      action: openbsd_pkg name=nmap-7.40 state=latest clean=yes
       register: result
       failed_when: result.changed == False
 
     - name: Make sure package with specific version is latest again (clean) - should not be changed
-      action: openbsd_pkg name=nmap-7.30 state=latest clean=yes
+      action: openbsd_pkg name=nmap-7.40 state=latest clean=yes
       register: result
       failed_when: result.changed == True
 
     - name: Reset status of package with specific version again (clean) - should be changed
-      action: openbsd_pkg name=nmap-7.30 state=absent clean=yes
+      action: openbsd_pkg name=nmap-7.40 state=absent clean=yes
       register: result
       failed_when: result.changed == False
 
 
 
     - name: Reset status of package with specific version (quick) - may be changed
-      action: openbsd_pkg name=nmap-7.30 state=absent quick=yes
+      action: openbsd_pkg name=nmap-7.40 state=absent quick=yes
 
     - name: Make sure package with specific verison is present (quick) - should be changed
-      action: openbsd_pkg name=nmap-7.30 state=present quick=yes
+      action: openbsd_pkg name=nmap-7.40 state=present quick=yes
       register: result
       failed_when: result.changed == False
 
     - name: Make sure package with specific version is present again (quick) - should not be changed
-      action: openbsd_pkg name=nmap-7.30 state=present quick=yes
+      action: openbsd_pkg name=nmap-7.40 state=present quick=yes
       register: result
       failed_when: result.changed == True
 
     - name: Make sure package with specific verison is absent (quick) - should be changed
-      action: openbsd_pkg name=nmap-7.30 state=absent quick=yes
+      action: openbsd_pkg name=nmap-7.40 state=absent quick=yes
       register: result
       failed_when: result.changed == False
 
     - name: Make sure package with specific version is absent again (quick) - should not be changed
-      action: openbsd_pkg name=nmap-7.30 state=absent quick=yes
+      action: openbsd_pkg name=nmap-7.40 state=absent quick=yes
       register: result
       failed_when: result.changed == True
 
     - name: Make sure package with specific version is latest (quick) - should be changed
-      action: openbsd_pkg name=nmap-7.30 state=latest quick=yes
+      action: openbsd_pkg name=nmap-7.40 state=latest quick=yes
       register: result
       failed_when: result.changed == False
 
     - name: Make sure package with specific version is latest again (quick) - should not be changed
-      action: openbsd_pkg name=nmap-7.30 state=latest quick=yes
+      action: openbsd_pkg name=nmap-7.40 state=latest quick=yes
       register: result
       failed_when: result.changed == True
 
     - name: Reset status of package with specific version again (quick) - should be changed
-      action: openbsd_pkg name=nmap-7.30 state=absent quick=yes
+      action: openbsd_pkg name=nmap-7.40 state=absent quick=yes
       register: result
       failed_when: result.changed == False
 
 
 
     - name: Reset status of package with specific version (clean+quick) - may be changed
-      action: openbsd_pkg name=nmap-7.30 state=absent clean=yes quick=yes
+      action: openbsd_pkg name=nmap-7.40 state=absent clean=yes quick=yes
 
     - name: Make sure package with specific verison is present (clean+quick) - should be changed
-      action: openbsd_pkg name=nmap-7.30 state=present clean=yes quick=yes
+      action: openbsd_pkg name=nmap-7.40 state=present clean=yes quick=yes
       register: result
       failed_when: result.changed == False
 
     - name: Make sure package with specific version is present again (clean+quick) - should not be changed
-      action: openbsd_pkg name=nmap-7.30 state=present clean=yes quick=yes
+      action: openbsd_pkg name=nmap-7.40 state=present clean=yes quick=yes
       register: result
       failed_when: result.changed == True
 
     - name: Make sure package with specific verison is absent (clean+quick) - should be changed
-      action: openbsd_pkg name=nmap-7.30 state=absent clean=yes quick=yes
+      action: openbsd_pkg name=nmap-7.40 state=absent clean=yes quick=yes
       register: result
       failed_when: result.changed == False
 
     - name: Make sure package with specific version is absent again (clean+quick) - should not be changed
-      action: openbsd_pkg name=nmap-7.30 state=absent clean=yes quick=yes
+      action: openbsd_pkg name=nmap-7.40 state=absent clean=yes quick=yes
       register: result
       failed_when: result.changed == True
 
     - name: Make sure package with specific version is latest (clean+quick) - should be changed
-      action: openbsd_pkg name=nmap-7.30 state=latest clean=yes quick=yes
+      action: openbsd_pkg name=nmap-7.40 state=latest clean=yes quick=yes
       register: result
       failed_when: result.changed == False
 
     - name: Make sure package with specific version is latest again (clean+quick) - should not be changed
-      action: openbsd_pkg name=nmap-7.30 state=latest clean=yes quick=yes
+      action: openbsd_pkg name=nmap-7.40 state=latest clean=yes quick=yes
       register: result
       failed_when: result.changed == True
 
     - name: Reset status of package with specific version again (clean+quick) - should be changed
-      action: openbsd_pkg name=nmap-7.30 state=absent clean=yes quick=yes
+      action: openbsd_pkg name=nmap-7.40 state=absent clean=yes quick=yes
       register: result
       failed_when: result.changed == False
 
@@ -658,160 +658,160 @@
 
 
     - name: Reset status of package with version and (multiple) flavors - may be changed
-      action: openbsd_pkg name=mutt-1.7.1v3-sasl-slang state=absent
+      action: openbsd_pkg name=mutt-1.7.2v3-sasl-slang state=absent
 
     - name: Make sure package with version and (multiple) flavors is present - should be changed
-      action: openbsd_pkg name=mutt-1.7.1v3-sasl-slang state=present
+      action: openbsd_pkg name=mutt-1.7.2v3-sasl-slang state=present
       register: result
       failed_when: result.changed == False
 
     - name: Make sure package with version and (multiple) flavors is present again - should not be changed
-      action: openbsd_pkg name=mutt-1.7.1v3-sasl-slang state=present
+      action: openbsd_pkg name=mutt-1.7.2v3-sasl-slang state=present
       register: result
       failed_when: result.changed == True
 
     - name: Make sure package with version and (multiple) flavors is absent - should be changed
-      action: openbsd_pkg name=mutt-1.7.1v3-sasl-slang state=absent
+      action: openbsd_pkg name=mutt-1.7.2v3-sasl-slang state=absent
       register: result
       failed_when: result.changed == False
 
     - name: Make sure package with version and (multiple) flavors is absent again - should not be changed
-      action: openbsd_pkg name=mutt-1.7.1v3-sasl-slang state=absent
+      action: openbsd_pkg name=mutt-1.7.2v3-sasl-slang state=absent
       register: result
       failed_when: result.changed == True
 
     - name: Make sure package with version and (multiple) flavors is latest - should be changed
-      action: openbsd_pkg name=mutt-1.7.1v3-sasl-slang state=latest
+      action: openbsd_pkg name=mutt-1.7.2v3-sasl-slang state=latest
       register: result
       failed_when: result.changed == False
 
     - name: Make sure package with version and (multiple) flavors is latest again - should not be changed
-      action: openbsd_pkg name=mutt-1.7.1v3-sasl-slang state=latest
+      action: openbsd_pkg name=mutt-1.7.2v3-sasl-slang state=latest
       register: result
       failed_when: result.changed == True
 
     - name: Reset status of package with version and (multiple) flavors again - should be changed
-      action: openbsd_pkg name=mutt-1.7.1v3-sasl-slang state=absent
+      action: openbsd_pkg name=mutt-1.7.2v3-sasl-slang state=absent
       register: result
       failed_when: result.changed == False
 
 
 
     - name: Reset status of package with version and (multiple) flavors (clean) - may be changed
-      action: openbsd_pkg name=mutt-1.7.1v3-sasl-slang state=absent clean=yes
+      action: openbsd_pkg name=mutt-1.7.2v3-sasl-slang state=absent clean=yes
 
     - name: Make sure package with version and (multiple) flavors is present (clean) - should be changed
-      action: openbsd_pkg name=mutt-1.7.1v3-sasl-slang state=present clean=yes
+      action: openbsd_pkg name=mutt-1.7.2v3-sasl-slang state=present clean=yes
       register: result
       failed_when: result.changed == False
 
     - name: Make sure package with version and (multiple) flavors is present again (clean) - should not be changed
-      action: openbsd_pkg name=mutt-1.7.1v3-sasl-slang state=present clean=yes
+      action: openbsd_pkg name=mutt-1.7.2v3-sasl-slang state=present clean=yes
       register: result
       failed_when: result.changed == True
 
     - name: Make sure package with version and (multiple) flavors is absent (clean) - should be changed
-      action: openbsd_pkg name=mutt-1.7.1v3-sasl-slang state=absent clean=yes
+      action: openbsd_pkg name=mutt-1.7.2v3-sasl-slang state=absent clean=yes
       register: result
       failed_when: result.changed == False
 
     - name: Make sure package with version and (multiple) flavors is absent again (clean) - should not be changed
-      action: openbsd_pkg name=mutt-1.7.1v3-sasl-slang state=absent clean=yes
+      action: openbsd_pkg name=mutt-1.7.2v3-sasl-slang state=absent clean=yes
       register: result
       failed_when: result.changed == True
 
     - name: Make sure package with version and (multiple) flavors is latest (clean) - should be changed
-      action: openbsd_pkg name=mutt-1.7.1v3-sasl-slang state=latest clean=yes
+      action: openbsd_pkg name=mutt-1.7.2v3-sasl-slang state=latest clean=yes
       register: result
       failed_when: result.changed == False
 
     - name: Make sure package with version and (multiple) flavors is latest again (clean) - should not be changed
-      action: openbsd_pkg name=mutt-1.7.1v3-sasl-slang state=latest clean=yes
+      action: openbsd_pkg name=mutt-1.7.2v3-sasl-slang state=latest clean=yes
       register: result
       failed_when: result.changed == True
 
     - name: Reset status of package with version and (multiple) flavors again (clean) - should be changed
-      action: openbsd_pkg name=mutt-1.7.1v3-sasl-slang state=absent clean=yes
+      action: openbsd_pkg name=mutt-1.7.2v3-sasl-slang state=absent clean=yes
       register: result
       failed_when: result.changed == False
 
 
 
     - name: Reset status of package with version and (multiple) flavors (quick) - may be changed
-      action: openbsd_pkg name=mutt-1.7.1v3-sasl-slang state=absent quick=yes
+      action: openbsd_pkg name=mutt-1.7.2v3-sasl-slang state=absent quick=yes
 
     - name: Make sure package with version and (multiple) flavors is present (quick) - should be changed
-      action: openbsd_pkg name=mutt-1.7.1v3-sasl-slang state=present quick=yes
+      action: openbsd_pkg name=mutt-1.7.2v3-sasl-slang state=present quick=yes
       register: result
       failed_when: result.changed == False
 
     - name: Make sure package with version and (multiple) flavors is present again (quick) - should not be changed
-      action: openbsd_pkg name=mutt-1.7.1v3-sasl-slang state=present quick=yes
+      action: openbsd_pkg name=mutt-1.7.2v3-sasl-slang state=present quick=yes
       register: result
       failed_when: result.changed == True
 
     - name: Make sure package with version and (multiple) flavors is absent (quick) - should be changed
-      action: openbsd_pkg name=mutt-1.7.1v3-sasl-slang state=absent quick=yes
+      action: openbsd_pkg name=mutt-1.7.2v3-sasl-slang state=absent quick=yes
       register: result
       failed_when: result.changed == False
 
     - name: Make sure package with version and (multiple) flavors is absent again (quick) - should not be changed
-      action: openbsd_pkg name=mutt-1.7.1v3-sasl-slang state=absent quick=yes
+      action: openbsd_pkg name=mutt-1.7.2v3-sasl-slang state=absent quick=yes
       register: result
       failed_when: result.changed == True
 
     - name: Make sure package with version and (multiple) flavors is latest (quick) - should be changed
-      action: openbsd_pkg name=mutt-1.7.1v3-sasl-slang state=latest quick=yes
+      action: openbsd_pkg name=mutt-1.7.2v3-sasl-slang state=latest quick=yes
       register: result
       failed_when: result.changed == False
 
     - name: Make sure package with version and (multiple) flavors is latest again (quick) - should not be changed
-      action: openbsd_pkg name=mutt-1.7.1v3-sasl-slang state=latest quick=yes
+      action: openbsd_pkg name=mutt-1.7.2v3-sasl-slang state=latest quick=yes
       register: result
       failed_when: result.changed == True
 
     - name: Reset status of package with version and (multiple) flavors again (quick) - should be changed
-      action: openbsd_pkg name=mutt-1.7.1v3-sasl-slang state=absent quick=yes
+      action: openbsd_pkg name=mutt-1.7.2v3-sasl-slang state=absent quick=yes
       register: result
       failed_when: result.changed == False
 
 
 
     - name: Reset status of package with version and (multiple) flavors (clean+quick) - may be changed
-      action: openbsd_pkg name=mutt-1.7.1v3-sasl-slang state=absent clean=yes quick=yes
+      action: openbsd_pkg name=mutt-1.7.2v3-sasl-slang state=absent clean=yes quick=yes
 
     - name: Make sure package with version and (multiple) flavors is present (clean+quick) - should be changed
-      action: openbsd_pkg name=mutt-1.7.1v3-sasl-slang state=present clean=yes quick=yes
+      action: openbsd_pkg name=mutt-1.7.2v3-sasl-slang state=present clean=yes quick=yes
       register: result
       failed_when: result.changed == False
 
     - name: Make sure package with version and (multiple) flavors is present again (clean+quick) - should not be changed
-      action: openbsd_pkg name=mutt-1.7.1v3-sasl-slang state=present clean=yes quick=yes
+      action: openbsd_pkg name=mutt-1.7.2v3-sasl-slang state=present clean=yes quick=yes
       register: result
       failed_when: result.changed == True
 
     - name: Make sure package with version and (multiple) flavors is absent (clean+quick) - should be changed
-      action: openbsd_pkg name=mutt-1.7.1v3-sasl-slang state=absent clean=yes quick=yes
+      action: openbsd_pkg name=mutt-1.7.2v3-sasl-slang state=absent clean=yes quick=yes
       register: result
       failed_when: result.changed == False
 
     - name: Make sure package with version and (multiple) flavors is absent again (clean+quick) - should not be changed
-      action: openbsd_pkg name=mutt-1.7.1v3-sasl-slang state=absent clean=yes quick=yes
+      action: openbsd_pkg name=mutt-1.7.2v3-sasl-slang state=absent clean=yes quick=yes
       register: result
       failed_when: result.changed == True
 
     - name: Make sure package with version and (multiple) flavors is latest (clean+quick) - should be changed
-      action: openbsd_pkg name=mutt-1.7.1v3-sasl-slang state=latest clean=yes quick=yes
+      action: openbsd_pkg name=mutt-1.7.2v3-sasl-slang state=latest clean=yes quick=yes
       register: result
       failed_when: result.changed == False
 
     - name: Make sure package with version and (multiple) flavors is latest again (clean+quick) - should not be changed
-      action: openbsd_pkg name=mutt-1.7.1v3-sasl-slang state=latest clean=yes quick=yes
+      action: openbsd_pkg name=mutt-1.7.2v3-sasl-slang state=latest clean=yes quick=yes
       register: result
       failed_when: result.changed == True
 
     - name: Reset status of package with version and (multiple) flavors again (clean+quick) - should be changed
-      action: openbsd_pkg name=mutt-1.7.1v3-sasl-slang state=absent clean=yes quick=yes
+      action: openbsd_pkg name=mutt-1.7.2v3-sasl-slang state=absent clean=yes quick=yes
       register: result
       failed_when: result.changed == False
 
@@ -986,3 +986,83 @@
 
     - name: Attempt to upgrade all packages (clean+quick) - may be changed
       action: openbsd_pkg name=* state=latest clean=yes quick=yes
+
+
+
+    - name: Reset status of package list - may be changed
+      action: openbsd_pkg name={{ item }} state=absent
+      with_items:
+          - nmap-7.40
+          - bwm-ng
+          - mtr--
+          - python%3.5
+
+    - name: Make sure bare stem package is present - should be changed
+      action: openbsd_pkg name={{ item }} state=present
+      with_items:
+          - nmap-7.40
+          - bwm-ng
+          - mtr--
+          - python%3.5
+      register: result
+      failed_when: result.changed == False
+
+    - name: Make sure bare stem package is present again - should not be changed
+      action: openbsd_pkg name={{ item }} state=present
+      with_items:
+          - nmap-7.40
+          - bwm-ng
+          - mtr--
+          - python%3.5
+      register: result
+      failed_when: result.changed == True
+
+    - name: Make sure bare stem package is absent - should be changed
+      action: openbsd_pkg name={{ item }} state=absent
+      with_items:
+          - nmap-7.40
+          - bwm-ng
+          - mtr--
+          - python%3.5
+      register: result
+      failed_when: result.changed == False
+
+    - name: Make sure bare stem package is absent again - should not be changed
+      action: openbsd_pkg name={{ item }} state=absent
+      with_items:
+          - nmap-7.40
+          - bwm-ng
+          - mtr--
+          - python%3.5
+      register: result
+      failed_when: result.changed == True
+
+    - name: Make sure bare stem package is latest - should be changed
+      action: openbsd_pkg name={{ item }} state=latest
+      with_items:
+          - nmap-7.40
+          - bwm-ng
+          - mtr--
+          - python%3.5
+      register: result
+      failed_when: result.changed == False
+
+    - name: Make sure bare stem package is latest again - should not be changed
+      action: openbsd_pkg name={{ item }} state=latest
+      with_items:
+          - nmap-7.40
+          - bwm-ng
+          - mtr--
+          - python%3.5
+      register: result
+      failed_when: result.changed == True
+
+    - name: Reset status of bare stem package again - should be changed
+      action: openbsd_pkg name={{ item }} state=absent
+      with_items:
+          - nmap-7.40
+          - bwm-ng
+          - mtr--
+          - python%3.5
+      register: result
+      failed_when: result.changed == False
