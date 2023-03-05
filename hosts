@@ -1,2 +1,2 @@
-[openbsd_pkg-tests]
+[openbsd_pkg_tests]
 192.168.1.62 ansible_python_interpreter=/usr/local/bin/python
